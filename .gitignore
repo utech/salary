@@ -1,0 +1,11 @@
+Makefile
+bin/configSalary.exe
+bin/salaryNetwork.exe
+bin/salaryLocal.exe
+bin/salaryQtSqlBrowser.exe
+src/Makefile
+src/Makefile.salaryNetwork
+src/configSalary/Makefile
+src/object_script.salaryNetwork
+src/tkeQtSqlBrowser/Makefile
+tmp/
