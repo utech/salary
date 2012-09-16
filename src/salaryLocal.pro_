@@ -1,0 +1,19 @@
+CONFIG		+= release
+CONFIG		-= debug debug_and_release debug_and_release_target
+
+TEMPLATE = app
+DEFINES += SALARY_LOCAL
+
+include(../../UtechLib/UtechLib.pri)
+
+include(project_files.pri)
+#CONFIG += console
+
+DESTDIR = ../bin
+UI_DIR = ./ui
+
+OBJECTS_DIR = ../tmp/localPro
+MOC_DIR = ../tmp/localPro
+UI_HEADERS_DIR = ../tmp/localPro
+UI_SOURCES_DIR = ../tmp/localPro
+RCC_DIR = ../tmp/localPro

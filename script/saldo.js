@@ -1,0 +1,26 @@
+//--------------------utech--------------------utech--------------------utech--------------------
+//	Файл скрипта для обрахунку сальдо в програмі нарахування зарплати
+//	Глобальними змінними-класами є:
+//		class UWorkerInfo wInfo - інформація про працівника, береться з таблиці npr;
+//		class UDayWorkerTabel wTabel[32] - табель працівника, береться з таблиці tabel;
+//		class UWorkerOperacii wOperacii[13] - інформація про нарахування працівника, береться з таблиці operacii;
+//		class UIdVal budjetniNormy[] - інформація про встановлені державою бюджетні норми, береться з таблиці budjetni_normy;
+//		class UNumWorkDays numWorkDays[13] - інформація про кількість робочих днів у місяці (за цілий рік+поточний місяць), береться з таблиці workday;
+//		class USumTabel sumTabel - підсумкова інформація про показники роботи працівника за місяць (використовується при внесенні не повного табеля, а лише підсумків);
+//		class UWorkerDodatkDohody wDodatkDohody - підсумкова інформація про додаткові доходи працівника
+//	Також, для зручності внесено функції:
+//		double budjNorma(int id) - отримання чначення бюджетної норми по ідентифікатору з таблиці budjetni_normy; 
+//		double workDays(int year, int month) кількість робочих днів в місяці month, року year;
+//		double d2m(double d) - заокруглення до сотих;
+//	Передбачено і прості глобальні змінні
+//		vydTabelya - значення, яке характеризує вид табеля, який використовується в нарахуванні
+//		budjetniNormyCount - кількість значень бюджетних норм вбазі даних
+//	У класах  wOperacii, numWorkDays нульвим членом масиву є значення поточного місяця, першим попереднього до поточного і т.д.
+//	
+//	Створений програмістами компанії "УТех" 11.12.2007р.
+//--------------------utech--------------------utech--------------------utech--------------------
+
+wOplata.Vyh_saldo = wOplata.Vh_saldo + wOplata.NarahSum + wOplata.O_VsogoNaRukyOtherDohid - wOplata.UtrymSum - wOplata.UtrymInshiSum -
+					wOplata.O_Inshi - wOplata.O_Shtraf - wOplata.O_Alimenty - 
+					wOplata.O_ZaPoperMis - wOplata.O_Premiya -
+					wOplata.O_Avans - wOplata.O_Oplacheno;

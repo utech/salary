@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UDialogChoosePidrozdil_salary</class>
+ <widget class="QDialog" name="UDialogChoosePidrozdil_salary">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>252</width>
+    <height>73</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вибір підрозділу</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBox_pidrozdily">
+     <property name="title">
+      <string>Підрозділи підприємства</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="comboBox_pidrozdily"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_accept">
+       <property name="text">
+        <string>Увійти</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../uPictRc.qrc">
+         <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_action_success-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_action_success-256.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_reject">
+       <property name="text">
+        <string>Відмінити</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../uPictRc.qrc">
+         <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/button_cancel-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/button_cancel-256.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox_pidrozdily</tabstop>
+  <tabstop>pushButton_accept</tabstop>
+  <tabstop>pushButton_reject</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../uPictRc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

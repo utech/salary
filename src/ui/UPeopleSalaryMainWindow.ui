@@ -1,0 +1,3256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UPeopleSalaryMainWindow</class>
+ <widget class="QMainWindow" name="UPeopleSalaryMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1144</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../uPictRc.qrc">
+    <normaloff>:/utechIcons/pictures/utechIcons/progImg.png</normaloff>:/utechIcons/pictures/utechIcons/progImg.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="margin">
+     <number>1</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <layout class="QHBoxLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_curDate">
+          <property name="text">
+           <string>Поточна дата</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit_curDate">
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="displayFormat">
+           <string>MM.yyyy</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_poshuk_PIB">
+          <property name="text">
+           <string>Пошук по ПІБ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_Poshuk_PIB">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_poshuk_osoba_id">
+          <property name="text">
+           <string>Пошук по ідентифікатору</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_poshuk_osoba_id">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::NoInsert</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Показати працівників</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_show_only_work_workers">
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="text">
+           <string>тільки працюючих</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Облікова картка працівника</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_id">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Ідентифікатор</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_id">
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="maximum">
+                <number>10000</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Prizv">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Прізвище</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Prizv">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Imya">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Ім'я</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Imya">
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Batk">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>По-батькові</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Batk">
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_gender">
+               <property name="text">
+                <string>Стать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_gender"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_BirthDate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Дата народження</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateEdit" name="dateEdit_BirthDate">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximumDate">
+                <date>
+                 <year>2200</year>
+                 <month>12</month>
+                 <day>31</day>
+                </date>
+               </property>
+               <property name="minimumDate">
+                <date>
+                 <year>1900</year>
+                 <month>1</month>
+                 <day>1</day>
+                </date>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Ідентифікаційний код</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_IdKod">
+               <property name="inputMask">
+                <string>0000000000; </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_DityNum">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>К-сть дітей</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_DityNum">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>12</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_PryinDate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Дата прийняття</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateEdit" name="dateEdit_PryinDate">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximumDate">
+                <date>
+                 <year>2200</year>
+                 <month>12</month>
+                 <day>31</day>
+                </date>
+               </property>
+               <property name="minimumDate">
+                <date>
+                 <year>1900</year>
+                 <month>1</month>
+                 <day>1</day>
+                </date>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Posada">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Посада</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_Posada">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_typ_roboty">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Тип роботи</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_typ_roboty">
+               <item>
+                <property name="text">
+                 <string>У штаті</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>По договору</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>За сумісн.</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Тип оплати</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_typ_oplaty">
+               <item>
+                <property name="text">
+                 <string>Помісячна</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Погодинна</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Stavka">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Оклад</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_Stavka">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <double>10000.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_pidrozdil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Підрозділ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_pidrozdil">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_tel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>№ тел.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Tel">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maxLength">
+                <number>20</number>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_rozryad">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Розряд</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_rozryad">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>6</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Ознака пільги</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_OznPilgy">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>4</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_KlasnistVodiya">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Класність водія</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_KlasnistVodiya">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>100.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_doplata">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Доплата</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_doplata">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>100.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_alimenty">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Аліменти</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_alimenty">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Бух.рахунок</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_buh_rahunok">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>1000</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="checkBox_ChlenProfspilky">
+               <property name="text">
+                <string>Член профсп.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_Pensioner">
+               <property name="text">
+                <string>Пенсіонер</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="checkBox_Invalid">
+               <property name="text">
+                <string>Інвалід</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_WorkerWorks">
+               <property name="text">
+                <string>Працює</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <spacer>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>5</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_salary_form_save">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Зберегти</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../uPictRc.qrc">
+                 <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/filesave-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/filesave-256.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>12</width>
+                 <height>12</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_salary_form_abort">
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Повернути</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../uPictRc.qrc">
+                 <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/reload_page-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/reload_page-256.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>12</width>
+                 <height>12</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_operacii">
+      <property name="title">
+       <string>Нарахування працівника</string>
+      </property>
+      <layout class="QVBoxLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QLabel" name="label_OperaciiYear">
+             <property name="text">
+              <string>Поточний рік</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_year_filtr">
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="minimum">
+              <number>2000</number>
+             </property>
+             <property name="maximum">
+              <number>2050</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_month_filtr">
+           <property name="text">
+            <string>Поточний місяць</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_month_filtr">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>12</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_show_operacii_checkboxes">
+           <property name="text">
+            <string>Показати -&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_vidprac_godyny">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Год./дні+Коментар</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_indexaciya">
+           <property name="text">
+            <string>Індексація</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_narahovano">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Нараховано</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_utrymannya">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Утримання</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_pislyapodatk_vidrah">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Оплата</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_Operacii_vidrahuv_na_zarplatu">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Відрах. на зарплату</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>37</width>
+             <height>19</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_operacii">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <property name="elideMode">
+          <enum>Qt::ElideNone</enum>
+         </property>
+         <widget class="QWidget" name="tab_likarnyaniVidpuskni">
+          <attribute name="icon">
+           <iconset>
+            <normaloff>:/pictures/pictures/sunny.png</normaloff>:/pictures/pictures/sunny.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>1. Лікарн./Відпускні</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>2</number>
+           </property>
+           <property name="margin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QSplitter" name="splitterLikarnVidpusk">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="handleWidth">
+              <number>6</number>
+             </property>
+             <property name="childrenCollapsible">
+              <bool>false</bool>
+             </property>
+             <widget class="QWidget" name="layoutWidget">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>2</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_likarnyani">
+                 <property name="text">
+                  <string>Лікарняні поточного місяця</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="tableWidget_Likarnyani">
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SingleSelection</enum>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>id</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Місяць</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Рік</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Сума</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>К-сть дн.</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Тип нарах.</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Коментар</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_LikarnyaniSum">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_10">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <property name="spacing">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_insert_Likarnyani">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Внести</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../uPictRc.qrc">
+                     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_del_Likarnyani">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Видалити</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../uPictRc.qrc">
+                     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="layoutWidget">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>2</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_vidpuskni">
+                 <property name="text">
+                  <string>Відпускні поточного місяця</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="tableWidget_Vidpuskni">
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SingleSelection</enum>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>id</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Місяць</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Рік</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Сума</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>К-сть днів</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Коментар</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../uPictRc.qrc">
+                    <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_VidpuskniSum">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <property name="spacing">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_insert_Vidpuskni">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Внести</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../uPictRc.qrc">
+                     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_del_Vidpuskni">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Видалити</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../uPictRc.qrc">
+                     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_zarplata">
+          <attribute name="icon">
+           <iconset>
+            <normaloff>:/pictures/pictures/feed.png</normaloff>:/pictures/pictures/feed.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>2. Ознака доходу 01</string>
+          </attribute>
+          <layout class="QVBoxLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_Operacii">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>330</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <row>
+              <property name="text">
+               <string>01</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>02</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>03</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>04</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>05</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>06</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>07</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>08</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>09</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>Підс.</string>
+              </property>
+             </row>
+             <row/>
+             <row/>
+             <row/>
+             <column>
+              <property name="text">
+               <string>id</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Відпрац. години / дні</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Коментар</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>І.Пром.інд.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>І.Індекс</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>І.Проінд.дох.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>І.Сума для інд.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Осн.нар.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Вислуга</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Лікарн.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Відпуск.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Святк.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Нічні</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Надуроч</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Кл.вод.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Премія</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Мат.доп.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Доплата</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Індексація</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Випл.проф.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Ін.нарах.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Всього</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.ЄВ</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.ЄВ. лікарн</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Фонд.зайн.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Соц.страх.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Соц.пільга</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Приб.под.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Утр.проф.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Ін.відрах.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Всього</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Пенс.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Соцстрах</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Фонд.Зайн.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Нещ.вип.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Інші</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Всього</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_inshi_dohody">
+          <attribute name="icon">
+           <iconset>
+            <normaloff>:/pictures/pictures/compose.png</normaloff>:/pictures/pictures/compose.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>3. Доходи з ознакою &gt; 01</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_dodatkovi_dohody">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <column>
+              <property name="text">
+               <string>id</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ОД</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Коментар</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Н.Нарах.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Пенс.фонд</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Фонд.зайн.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Соц.страх.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Соц.пільга</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Приб.под.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Утр.проф.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Ін.відрах.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>У.Всього</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.На руки</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Пенс.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Соцстрах</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Фонд.Зайн.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Нещ.вип.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Інші</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>В.Всього</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <spacer>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>10</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_insert_other_dohid">
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Внести</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../uPictRc.qrc">
+                 <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_bottom-256.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>12</width>
+                 <height>12</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_del_other_dohid">
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Видалити</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../uPictRc.qrc">
+                 <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_remove-256.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>12</width>
+                 <height>12</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_oplata">
+          <attribute name="icon">
+           <iconset>
+            <normaloff>:/pictures/pictures/links.png</normaloff>:/pictures/pictures/links.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>4. Вх.сальдо, Сумарні нарах. і Оплата</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_SumNarah_Oplata">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>330</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <row>
+              <property name="text">
+               <string>01</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>02</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>03</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>04</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>05</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>06</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>07</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>08</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>09</string>
+              </property>
+             </row>
+             <row/>
+             <row/>
+             <row/>
+             <row>
+              <property name="text">
+               <string>Підс.</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>id</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Коментар</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Вх.сальдо</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Нарах. ОД=01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Нарах. ОД&gt;01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Утрим. ОД=01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Утрим. ОД&gt;01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Сума Утрим.</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Відрах. ОД=01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Відрах. ОД&gt;01</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Сума Відрах.</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>На руки в міс.</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Сал.+На руки</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Інші.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Штраф</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Аліменти</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Попер.міс.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Премія</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Аванс</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>О.Видано</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../uPictRc.qrc">
+                <normaloff>:/other/pictures/utechIcons/edit.png</normaloff>:/other/pictures/utechIcons/edit.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Вих.сальдо</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_first">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Перейти на перший запис</string>
+        </property>
+        <property name="text">
+         <string>Перший</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/2leftarrow-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/2leftarrow-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_previous">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Перейти на попередній запис</string>
+        </property>
+        <property name="text">
+         <string>Попередній</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1leftarrow-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1leftarrow-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_next">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Перейти на наступний запис</string>
+        </property>
+        <property name="text">
+         <string>Наступний</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1rightarrow-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1rightarrow-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_last">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Перейти на останній запис</string>
+        </property>
+        <property name="text">
+         <string>Останній</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/2rightarrow-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/2rightarrow-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_new">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Новий запис</string>
+        </property>
+        <property name="text">
+         <string>Новий</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/add_user-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/add_user-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_delete">
+        <property name="text">
+         <string>Видалити</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../uPictRc.qrc">
+          <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_remove-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_remove-256.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBox_navigator">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string>Навігація по номеру запису</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_max_rows_salary">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>із 100</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>16</width>
+          <height>23</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>10</width>
+        <height>0</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1144</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Програма</string>
+    </property>
+    <addaction name="action_debuger"/>
+    <addaction name="separator"/>
+    <addaction name="action_closeProgram"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Документи</string>
+    </property>
+    <addaction name="action_tabel"/>
+    <addaction name="action_fullTabel"/>
+    <addaction name="separator"/>
+    <addaction name="action_indexaciyaBaseMonth"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Довідники</string>
+    </property>
+    <addaction name="action_infAboutFirm"/>
+    <addaction name="action_BudgetNorm"/>
+    <addaction name="actionMonthlyBudjetniNormy"/>
+    <addaction name="action_MeritOfYears"/>
+    <addaction name="action_posady_i_taryfy"/>
+    <addaction name="action_pidrozdily"/>
+    <addaction name="action_svyatkoviDni"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Операції</string>
+    </property>
+    <addaction name="action_OsnovneNarah"/>
+    <addaction name="action_NarahSumyUtrIVidr"/>
+    <addaction name="action_calcOplataInMonth"/>
+    <addaction name="action_calcVhSaldoInMonth"/>
+    <addaction name="separator"/>
+    <addaction name="action_OsnovneNarahDlyaPotochnogoPrac"/>
+    <addaction name="action_NarahSumyUtrIVidrCurWorker"/>
+    <addaction name="action_calcOplataInMonthForCurWorker"/>
+    <addaction name="action_calcVhSaldoInMonthForCurWorker"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Друк</string>
+    </property>
+    <addaction name="action_print_perelik_pracivnykiv"/>
+    <addaction name="separator"/>
+    <addaction name="action_print_vidomist_narah_zarplaty"/>
+    <addaction name="action_print_utrymannya"/>
+    <addaction name="action_print_vidrahuvannya"/>
+    <addaction name="action_printOplataZaborgovanist"/>
+    <addaction name="action_printVidomistNarahuvannyaIVidrahuvannya"/>
+    <addaction name="separator"/>
+    <addaction name="action_print_month_cards"/>
+    <addaction name="action_print_month_card_for_current_worker"/>
+    <addaction name="separator"/>
+    <addaction name="action_print_year_cards"/>
+    <addaction name="action_print_year_card_for_current_worker"/>
+    <addaction name="action_print_year_utrymannya_cards"/>
+    <addaction name="action_print_year_utrymannya_card_for_current_worker"/>
+    <addaction name="separator"/>
+    <addaction name="action_printPlatijky"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>Налаштування</string>
+    </property>
+    <addaction name="action_gui_options"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>Інфо</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>Ел.звіти</string>
+    </property>
+    <addaction name="action_createZvit1df"/>
+    <addaction name="action_misyachnaPersonifikaciya"/>
+    <addaction name="action_elZvitEdynyiVnesok"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_8"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_7"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar_main">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Головна панель</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_debuger"/>
+   <addaction name="separator"/>
+   <addaction name="action_closeProgram"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_taryfy_na_zarplatu">
+   <property name="windowTitle">
+    <string>Посади і тарифи</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout">
+     <property name="margin">
+      <number>2</number>
+     </property>
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTableWidget" name="tableWidget_taryfy">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string>id</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Посада</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Тариф</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <layout class="QHBoxLayout">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_insertTaryf">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="text">
+          <string>Додати</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../uPictRc.qrc">
+           <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_add-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_add-256.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_delTaryf">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../uPictRc.qrc">
+           <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_remove-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/edit_remove-256.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_MeritOfYears"/>
+   <addaction name="action_BudgetNorm"/>
+   <addaction name="actionMonthlyBudjetniNormy"/>
+   <addaction name="separator"/>
+   <addaction name="action_tabel"/>
+   <addaction name="action_fullTabel"/>
+   <addaction name="separator"/>
+   <addaction name="action_OsnovneNarah"/>
+   <addaction name="action_NarahSumyUtrIVidr"/>
+  </widget>
+  <action name="action_closeProgram">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_stop1-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_stop1-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вихід з програми</string>
+   </property>
+  </action>
+  <action name="action_tabel">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_business-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_business-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Підсумковий Табель</string>
+   </property>
+  </action>
+  <action name="action_infAboutFirm">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/signature-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/signature-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Реквізити підприємства</string>
+   </property>
+  </action>
+  <action name="action_BudgetNorm">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/status_unknown-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/status_unknown-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Бюджетні норми</string>
+   </property>
+  </action>
+  <action name="action_MeritOfYears">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/month-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/month-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вислуга років</string>
+   </property>
+  </action>
+  <action name="action_OsnovneNarah">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Основне нарахування</string>
+   </property>
+  </action>
+  <action name="action_NarahSumyUtrIVidr">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Розрах. утримань і відрахувань</string>
+   </property>
+  </action>
+  <action name="action_OsnovneNarahDlyaPotochnogoPrac">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Основне нарахування для поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_NarahSumyUtrIVidrCurWorker">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/funct-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Розрах. утримань і відрахувань для поточного працівника</string>
+   </property>
+  </action>
+  <action name="actionMonthlyBudjetniNormy">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_update_critical-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_update_critical-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Помісячні Бюджетні норми</string>
+   </property>
+  </action>
+  <action name="action_posady_i_taryfy">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_forum-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_forum-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Посади і тарифи</string>
+   </property>
+  </action>
+  <action name="action_debuger">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/advanced-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/advanced-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відладочне вікно</string>
+   </property>
+  </action>
+  <action name="action_print_perelik_pracivnykiv">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Перелік працівників</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/info-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/info-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Про програму</string>
+   </property>
+  </action>
+  <action name="action_gui_options">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/configure-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/configure-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Опції</string>
+   </property>
+  </action>
+  <action name="action_print_vidomist_narah_zarplaty">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відомість нарахування зарплати</string>
+   </property>
+  </action>
+  <action name="action_print_month_cards">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк місячних карток для працівників</string>
+   </property>
+  </action>
+  <action name="action_print_month_card_for_current_worker">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк місячної картки для поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_calcOplataInMonth">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/money-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/money-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Розрах. оплати (аліменти, аванс, штраф)</string>
+   </property>
+  </action>
+  <action name="action_calcVhSaldoInMonth">
+   <property name="text">
+    <string>Розрах. Вх.Сальдо</string>
+   </property>
+  </action>
+  <action name="action_calcOplataInMonthForCurWorker">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/money-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/money-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Розрах. оплати (аліменти, аванс, штраф) для поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_calcVhSaldoInMonthForCurWorker">
+   <property name="text">
+    <string>Розрах. Вх.Сальдо для поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_print_utrymannya">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відомість нарахованих утримань із зарплати</string>
+   </property>
+  </action>
+  <action name="action_print_vidrahuvannya">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відомість нарахованих відрахувань на зарплату</string>
+   </property>
+  </action>
+  <action name="action_printOplataZaborgovanist">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відомості оплати/заборгованості</string>
+   </property>
+  </action>
+  <action name="action_printPlatijky">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк платіжок для оплати податків в фонди</string>
+   </property>
+  </action>
+  <action name="action_createZvit1df">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_text-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_text-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>1ДФ для OPZ</string>
+   </property>
+  </action>
+  <action name="action_printVidomistNarahuvannyaIVidrahuvannya">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відомість нарахування і відрахування по рахунках</string>
+   </property>
+  </action>
+  <action name="action_indexaciyaBaseMonth">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_add-to-autorun-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/agt_add-to-autorun-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Базовість індексації</string>
+   </property>
+  </action>
+  <action name="action_print_year_cards">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк річних карток усіх працівників</string>
+   </property>
+  </action>
+  <action name="action_print_year_card_for_current_worker">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/fileprint-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Друк річної картки поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_pidrozdily">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_icon-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/view_icon-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Підрозділи</string>
+   </property>
+  </action>
+  <action name="action_svyatkoviDni">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1day-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/1day-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Святкові дні</string>
+   </property>
+  </action>
+  <action name="action_fullTabel">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/7days-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/7days-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Повний Табель</string>
+   </property>
+  </action>
+  <action name="action_misyachnaPersonifikaciya">
+   <property name="icon">
+    <iconset resource="../uPictRc.qrc">
+     <normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/month-256.png</normaloff>:/crystalProject/pictures/crystal-project-actions-PNG/month-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Щомісячна персоніфікація</string>
+   </property>
+  </action>
+  <action name="action_print_year_utrymannya_cards">
+   <property name="text">
+    <string>Друк річних карток з утриманнями для усіх працівників</string>
+   </property>
+  </action>
+  <action name="action_print_year_utrymannya_card_for_current_worker">
+   <property name="text">
+    <string>Друк річної картки з утриманнями для поточного працівника</string>
+   </property>
+  </action>
+  <action name="action_elZvitEdynyiVnesok">
+   <property name="text">
+    <string>Єдиний внесок</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_Prizv</tabstop>
+  <tabstop>lineEdit_Imya</tabstop>
+  <tabstop>lineEdit_Batk</tabstop>
+  <tabstop>dateEdit_BirthDate</tabstop>
+  <tabstop>lineEdit_IdKod</tabstop>
+  <tabstop>spinBox_DityNum</tabstop>
+  <tabstop>dateEdit_PryinDate</tabstop>
+  <tabstop>comboBox_Posada</tabstop>
+  <tabstop>comboBox_typ_roboty</tabstop>
+  <tabstop>comboBox_typ_oplaty</tabstop>
+  <tabstop>doubleSpinBox_Stavka</tabstop>
+  <tabstop>comboBox_pidrozdil</tabstop>
+  <tabstop>lineEdit_Tel</tabstop>
+  <tabstop>spinBox_rozryad</tabstop>
+  <tabstop>spinBox_OznPilgy</tabstop>
+  <tabstop>doubleSpinBox_KlasnistVodiya</tabstop>
+  <tabstop>doubleSpinBox_doplata</tabstop>
+  <tabstop>doubleSpinBox_alimenty</tabstop>
+  <tabstop>spinBox_buh_rahunok</tabstop>
+  <tabstop>checkBox_ChlenProfspilky</tabstop>
+  <tabstop>checkBox_Pensioner</tabstop>
+  <tabstop>checkBox_Invalid</tabstop>
+  <tabstop>checkBox_WorkerWorks</tabstop>
+  <tabstop>spinBox_month_filtr</tabstop>
+  <tabstop>checkBox_Operacii_indexaciya</tabstop>
+  <tabstop>tabWidget_operacii</tabstop>
+  <tabstop>tableWidget_Likarnyani</tabstop>
+  <tabstop>tableWidget_Vidpuskni</tabstop>
+  <tabstop>pushButton_delete</tabstop>
+  <tabstop>tableWidget_Operacii</tabstop>
+  <tabstop>tableWidget_dodatkovi_dohody</tabstop>
+  <tabstop>tableWidget_SumNarah_Oplata</tabstop>
+  <tabstop>tableWidget_taryfy</tabstop>
+  <tabstop>pushButton_insertTaryf</tabstop>
+  <tabstop>pushButton_delTaryf</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../uPictRc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
